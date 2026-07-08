@@ -39,7 +39,7 @@ SAVED="$(cd "$(dirname \"$PRG\")" >/dev/null 2>&1 && pwd)"
 APP_HOME="$(dirname \"$SAVED\")"
 
 # Add default JVM options here. You can also use JAVA_OPTS and GRADLE_OPTS to pass JVM options to this script.
-DEFAULT_JVM_OPTS='" -Xmx64m -Xms64m '"
+DEFAULT_JVM_OPTS='-Xmx64m -Xms64m'
 
 # Use the maximum available, or set MAX_FD != -1 to use that value.
 MAX_FD="maximum"
@@ -70,7 +70,7 @@ case "$( uname )" in
   MSYS* | MINGW* )
     msys=true
     ;;
-GNU/Linux)
+  GNU/Linux)
     nogwin=true
     ;;
 esac
@@ -103,15 +103,15 @@ fi
 # Increase the maximum file descriptors if we can.
 if ! "$cygwin" && ! "$darwin" && ! "$msys" && ! "$nogwin" ; then
     case $( ulimit -S -n ) in       #(
-      'unlimited'|*'      '* ) :;; #(
+      'unlimited'|*'      '* ) :; #(
       ?* ) ulimit -S -n 262144 ;;
     esac
 fi
 
 # Collect all arguments for the java command;
 # * $DEFAULT_JVM_OPTS, $JAVA_OPTS, and $GRADLE_OPTS can contain fragments of
-#   shell commands we need to be careful to let shells expand those fragments
-#   and to pass the resulting string to the JVM as a single argument
+# shell commands we need to be careful to let shells expand those fragments
+# and to pass the resulting string to the JVM as a single argument
 # * Put the JVM user-defined options in, so they take precedence
 
 set -- \
