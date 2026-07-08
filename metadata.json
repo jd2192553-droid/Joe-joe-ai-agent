@@ -1,0 +1,6 @@
+{
+  "name": "Joe joe",
+  "description": "An interactive AI Agent application that plans tasks, uses local tools (search, memory, math), and runs task execution loops using the Gemini API and local storage.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
